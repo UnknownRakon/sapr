@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
     <title>Лабораторная 2</title>
   </head>
 
@@ -17,17 +18,17 @@
           <li><a href="#">Resources</a></li>
           <li><a href="#">FAQs</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#" class="nav__button">Get started</a></li>
+          <li class="nav__button"><a href="#">Get started</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <section>
+      <section class="section-one">
         <div>
-          <div>New</div>
+          <div class="markers new">New</div>
           <!-- что это такое -->
-          <div>The Art Market Report</div>
+          <div class="markers report">The Art Market Report</div>
           <h1>Rely on us</h1>
           <p>
             Our Customer Due Diligence platform helps you avoid fines or losing
@@ -44,10 +45,12 @@
         </div>
 
         <a href="#">What is arcarta? <img src="img/arrow.svg" alt="arrow" /></a>
-      </section>
-      <img src="img/section2.svg" alt="section2" />
+      
+        <img src="img/section2.svg" alt="section2" />
 
-      <section>
+      </section>
+      
+      <section class="section-two">
         <div>
           <img src="img/art_dealers.svg" alt="art_dealers" />
           <h3>For Art Dealers</h3>
@@ -74,17 +77,17 @@
         </div>
       </section>
 
-      <section>
-        <div>
+      <section class="section-three">
+
+        <div class="quiz">
           <span>01</span>
           <img src="img/laptop.svg" alt="laptop">
           <h5>Compliance Quiz</h5>
-          <hr/>
           <button>Begin <img src="img/arrow2.svg" alt="arrow2"></button>
         </div>
 
-        <div>
-          <div>New</div>
+        <div class="description">
+          <div class="markers new">New</div>
           <h2>Does Anti-money Laundering affect you?</h2>
           <p>A short, interactive quiz to check if your art business is affected by 5AMLD regulation.</p>
           <button>Take the Quiz</button>
@@ -92,7 +95,7 @@
       </section>
 
       <section>
-        <div>
+        <div class="form-container">
           <img src="img/art_world.svg" alt="art_world">
           <div>
             <h4>Art world insight.</h4>
@@ -110,59 +113,60 @@
     <footer>
       <div>
         <img src="img/logo.svg" alt="logo">
-        <p>Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting you from cybercrime.</p>
+        <p class="footer-text">Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting you from cybercrime.</p>
         <h6>Approved Service Provider</h6>
         <img src="img/bada.svg" alt="bada">
         <h6>In Partnership with</h6>
         <img src="img/london.svg" alt="london">
-        <p>Registered with the Information Commissioner's Office (ICO) Registration number: ZA679248</p>
-        <p>© Arc-Pay Ltd 2021</p>
+        <p class="footer-caption">Registered with the Information Commissioner's Office (ICO) Registration number: ZA679248</p>
+        <p class="footer-caption">© Arc-Pay Ltd 2021</p>
         <img src="img/footer.svg" alt="footer">
       </div>
 
       <div>
         <h6>Links</h6>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About us</a></li>
-          <li><a href="#">Why arcarta</a></li>
-          <li><a href="#">Success Stories</a></li>
-          <li><a href="#">FAQ's</a></li>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Join</a></li>
-          <li><a href="#">Invite</a></li>
-          <li><a href="#">Compliance Quiz</a></li>
-          <li><a href="#">ID Document Quiz</a></li>
+          <li><a href="#" class="footer-text">Home</a></li>
+          <li><a href="#" class="footer-text">About us</a></li>
+          <li><a href="#" class="footer-text">Why arcarta</a></li>
+          <li><a href="#" class="footer-text">Success Stories</a></li>
+          <li><a href="#" class="footer-text">FAQ's</a></li>
+          <li><a href="#" class="footer-text">Contact Us</a></li>
+          <li><a href="#" class="footer-text">Join</a></li>
+          <li><a href="#" class="footer-text">Invite</a></li>
+          <li><a href="#" class="footer-text">Compliance Quiz</a></li>
+          <li><a href="#" class="footer-text">ID Document Quiz</a></li>
         </ul>
       </div>
 
       <div>
+
         <h6>Solutions</h6>
         <ul>
-          <li><a href="#">For Galleries</a></li>
-          <li><a href="#">For Advisors</a></li>
-          <li><a href="#">For Auctioneers</a></li>
-          <li><a href="#">For Secure Payments</a></li>
-          <li><a href="#">For Buyers & Collectors</a></li>
-          <li><a href="#">Online AML Training</a></li>
+          <li><a href="#" class="footer-text">For Galleries</a></li>
+          <li><a href="#" class="footer-text">For Advisors</a></li>
+          <li><a href="#" class="footer-text">For Auctioneers</a></li>
+          <li><a href="#" class="footer-text">For Secure Payments</a></li>
+          <li><a href="#" class="footer-text">For Buyers & Collectors</a></li>
+          <li><a href="#" class="footer-text">Online AML Training</a></li>
         </ul>
       </div>
 
       <div>
         <h6>Resources</h6>
         <ul>
-          <li><a href="#">Articles</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">Help Centre</a></li>
-          <li><a href="#">The Bigger Picture</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a href="#">Brand Assets</a></li>
-          <li><a href="#">The Art Market Report</a><div>New</div></li>
+          <li><a href="#" class="footer-text">Articles</a></li>
+          <li><a href="#" class="footer-text">Resources</a></li>
+          <li><a href="#" class="footer-text">Help Centre</a></li>
+          <li><a href="#" class="footer-text">The Bigger Picture</a></li>
+          <li><a href="#" class="footer-text">Login</a></li>
+          <li><a href="#" class="footer-text">Brand Assets</a></li>
+          <li><a href="#" class="footer-text">The Art Market Report</a><div class="markers new">New</div></li>
         </ul>
       </div>
 
       <div>
-        <p>Privacy & Terms</p>
+        <p class="footer-caption">Privacy & Terms</p>
         <a href="#"><img src="img/twitter.svg" alt="twitter"></a>
         <a href="#"><img src="img/inst.svg" alt="inst"></a>
         <a href="#"><img src="img/youtube.svg" alt="youtube"></a>
