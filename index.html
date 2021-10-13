@@ -10,7 +10,7 @@
 
   <body>
     <header>
-      <img src="img/logo.svg" alt="logo" />
+      <img src="img/logo.svg" alt="logo"/>
       <nav>
         <ul>
           <li><a href="#">What is arcarta?</a></li>
@@ -25,19 +25,22 @@
 
     <main>
       <section class="section-one">
-        <div>
+        <div class="action">
+          <div class="markers-container">
           <div class="markers new">New</div>
           <!-- что это такое -->
           <div class="markers report">The Art Market Report</div>
+          </div>
+          
           <h1>Rely on us</h1>
           <p>
             Our Customer Due Diligence platform helps you avoid fines or losing
             clients due to AML while protecting you from cybercrime.
           </p>
-          <button>Learn More</button>
+          <button class="action__button">Learn More</button>
         </div>
 
-        <div>
+        <div class="brands">
           <img src="img/colnaghi.svg" alt="colnaghi" />
           <img src="img/luxembourg.svg" alt="luxembourg" />
           <img src="img/tomasso.svg" alt="tomasso" />
@@ -46,42 +49,44 @@
 
         <a href="#">What is arcarta? <img src="img/arrow.svg" alt="arrow" /></a>
       
-        <img src="img/section2.svg" alt="section2" />
+        <img class="banner" src="img/section2.svg" alt="section2" />
 
       </section>
       
       <section class="section-two">
-        <div>
+        <div class="cards__container">
+        <div class="card">
           <img src="img/art_dealers.svg" alt="art_dealers" />
           <h3>For Art Dealers</h3>
           <p>Galleries and independent art dealers</p>
           <button>Learn More</button>
         </div>
-        <div>
+        <div class="card">
           <img src="img/advisors.svg" alt="advisors" />
           <h3>For Advisors</h3>
           <p>Advisors, agents and consultants</p>
           <button>Learn More</button>
         </div>
-        <div>
+        <div class="card">
           <img src="img/auctioneers.svg" alt="auctioneers" />
           <h3>For Auctioneers</h3>
           <p>Online and offline auctioneers</p>
           <button>Learn More</button>
         </div>
-        <div>
+        <div class="card">
           <img src="img/buyers.svg" alt="buyers" />
           <h3>For Buyers & Collectors</h3>
           <p>Receiving Invoices, making card payments and sending your ID and address documents</p>
           <button>Learn More</button>
         </div>
+      </div>
       </section>
 
       <section class="section-three">
 
         <div class="quiz">
           <span>01</span>
-          <img src="img/laptop.svg" alt="laptop">
+          <img class="quiz__image" src="img/laptop.svg" alt="laptop">
           <h5>Compliance Quiz</h5>
           <button>Begin <img src="img/arrow2.svg" alt="arrow2"></button>
         </div>
@@ -97,7 +102,7 @@
       <section>
         <div class="form-container">
           <img src="img/art_world.svg" alt="art_world">
-          <div>
+          <div class="form">
             <h4>Art world insight.</h4>
             <p>Receive our newsletter direct to your inbox to follow updates to legislation and the EU art-market's response.</p>
             <form>
@@ -111,7 +116,7 @@
 
 
     <footer>
-      <div>
+      <div class="partners">
         <img src="img/logo.svg" alt="logo">
         <p class="footer-text">Our Customer Due Diligence platform helps you avoid fines or losing clients due to AML while protecting you from cybercrime.</p>
         <h6>Approved Service Provider</h6>
@@ -120,7 +125,6 @@
         <img src="img/london.svg" alt="london">
         <p class="footer-caption">Registered with the Information Commissioner's Office (ICO) Registration number: ZA679248</p>
         <p class="footer-caption">© Arc-Pay Ltd 2021</p>
-        <img src="img/footer.svg" alt="footer">
       </div>
 
       <div>
@@ -161,11 +165,12 @@
           <li><a href="#" class="footer-text">The Bigger Picture</a></li>
           <li><a href="#" class="footer-text">Login</a></li>
           <li><a href="#" class="footer-text">Brand Assets</a></li>
-          <li><a href="#" class="footer-text">The Art Market Report</a><div class="markers new">New</div></li>
+          <li class="new-item"><a href="#" class="footer-text">The Art Market Report</a><div class="markers new">New</div></li>
         </ul>
       </div>
 
-      <div>
+      <div class="footer__bottom">
+        <img src="img/footer.svg" alt="footer">
         <p class="footer-caption">Privacy & Terms</p>
         <a href="#"><img src="img/twitter.svg" alt="twitter"></a>
         <a href="#"><img src="img/inst.svg" alt="inst"></a>
