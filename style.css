@@ -208,10 +208,28 @@ h3{
     color: var(--black);
 }
 
+.section-three {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 340px 135px;
+}
+
 .quiz{
     background: var(--quiz);
     color:white;
     border-radius: 10px;
+    width: 220px;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    padding: 19px 25px;
+    justify-content: space-between;
+}
+
+.quiz__image{
+    width: 64px;
+    height: auto;
 }
 
 .quiz span{
@@ -234,6 +252,11 @@ h5{
     font-size: 14px;
     line-height: 20px;
     color: white;
+    display: flex;
+    align-items: center;
+    padding-top: 5px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 h2{
@@ -241,6 +264,14 @@ h2{
     font-size: 53px;
     line-height: 62px;
     color: var(--black); 
+}
+
+.description {
+    width: 470px;
+    height: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .description p{
@@ -258,10 +289,25 @@ h2{
     font-size: 15px;
     line-height: 20px;
     text-align: center;
+    width: fit-content;
+    padding: 13px 31px;
 }
 
 .form-container{
     background: var(--form);
+    width: 1200px;
+    margin: 0 auto;
+    padding: 45px 193px 45px 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.form {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px 0;
 }
 
 h4{
@@ -278,16 +324,23 @@ h4{
     color: var(--black);
 }
 
-.form-container form{
+.form form{
     background: white;
     border-radius: 10px;
     box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    display: flex;
+    /* justify-content: space-between; */
+    padding-right: 9px;
 }
 
 .form-container input{
     border: none;
     background: none;
     color: hsla(0,0%,0%,0.45);
+    height: 55px;
+    padding: 11px 0 11px 31px;
+    width: 100%;
 }
 
 .form-container button{
@@ -308,6 +361,7 @@ h6{
     font-size: 13px;
     line-height: 20px;
     color: var(--black);
+    margin-bottom: 7px;
 }
 
 .footer-caption{
@@ -315,4 +369,75 @@ h6{
     font-size: 13px;
     line-height: 20px;
     color:var(--caption);
+    padding: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 145px 110px 80px;
+    height: 600px;
+}
+
+footer div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 440px;
+    width: 200px;
+}
+
+.partners {
+    width: 400px;
+    margin-right: 82px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex:2;
+}
+
+footer ul li {
+    display: flex;
+    width: 190px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.logo {
+    width: 150px;
+    height: 30px;
+}
+
+.bada {
+    width: 76px;
+    height: 76px;
+}
+
+.london {
+    width: 158px;
+    height: 67px;
+}
+
+.footer {
+    width: 161px;
+    height: 76px;
+    margin: 0 auto 0 0;
+}
+
+.footer__bottom {
+    flex:0 0 1;
+    width: 100%;
+    height: 75px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__bottom img {
+    padding: 5px;
 }
