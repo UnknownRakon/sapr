@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Лабораторная 2</title>
+  </head>
+
+  <body>
+    <header>
+      <a href="./index.html"><img src="img/logo.svg" alt="logo" /></a>
+      <nav>
+        <ul>
+          <li><a href="#">What is arcarta?</a></li>
+          <li><a href="#">Solutions</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="./form.html">Contact</a></li>
+          <li class="nav__button"><a href="#">Get started</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="auth">
+      <form name="contact" method="POST" data-netlify="true">
+        <fieldset>
+          <legend>Личная информация</legend>
+          <label for="name">Имя</label>
+          <input type="text" name="name" id="name" required />
+          <label for="date">Дата рождения</label>
+          <input type="date" name="date" id="date" required />
+          <p>Пол</p>
+          <input type="radio" name="sex" id="sex1" />
+          <label for="sex1">Мужской</label>
+          <input type="radio" name="sex" id="sex2" />
+          <label for="sex1">Женский</label>
+          <input type="radio" name="sex" id="sex3" />
+          <label for="sex1">attack helicopter</label>
+          <label for="password">Пароль</label>
+          <input type="password" name="password" id="password" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Контактные данные</legend>
+          <label for="email">Почта</label>
+          <input
+            placeholder="IvanIvanov@mail.ru"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+          <label for="phone">Телефон</label>
+          <input
+            placeholder="+79008006633"
+            type="tel"
+            name="phone"
+            id="phone"
+          />
+          <label for="datetime">Удобный интервал для связи</label>
+          <select name="datetime" id="datetime">
+            <option value="morning">Утро</option>
+            <option value="day">День</option>
+            <option value="evening">Вечер</option>
+            <option value="night">Ночь</option>
+          </select>
+        </fieldset>
+        <button type="submit">Отправить</button>
+        <button type="reset">Сбросить</button>
+      </form>
+    </main>
+
+    <footer class="fixed">
+      <div class="footer__bottom">
+        <img src="img/footer.svg" alt="footer" class="footer" />
+        <p class="footer-caption">Privacy & Terms</p>
+        <a href="#"><img src="img/twitter.svg" alt="twitter" /></a>
+        <a href="#"><img src="img/inst.svg" alt="inst" /></a>
+        <a href="#"><img src="img/youtube.svg" alt="youtube" /></a>
+      </div>
+    </footer>
+  </body>
+</html>
