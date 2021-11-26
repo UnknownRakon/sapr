@@ -35,24 +35,35 @@
         <fieldset>
           <legend>Личная информация</legend>
           <label for="name">Имя</label>
-          <input type="text" name="name" id="name" required />
+          <input class="field" type="text" name="name" id="name" required />
           <label for="date">Дата рождения</label>
-          <input type="date" name="date" id="date" required />
+          <input class="field" type="date" name="date" id="date" required />
           <p>Пол</p>
-          <input type="radio" name="sex" id="sex1" />
-          <label for="sex1">Мужской</label>
-          <input type="radio" name="sex" id="sex2" />
-          <label for="sex1">Женский</label>
-          <input type="radio" name="sex" id="sex3" />
-          <label for="sex1">attack helicopter</label>
+
+          <label for="sex1">
+            <input type="radio" name="sex" id="sex1" />Мужской
+          </label>
+          <label for="sex1">
+            <input type="radio" name="sex" id="sex2" />Женский
+          </label>
+          <label for="sex1">
+            <input type="radio" name="sex" id="sex3" />attack helicopter
+          </label>
           <label for="password">Пароль</label>
-          <input type="password" name="password" id="password" required />
+          <input
+            class="field"
+            type="password"
+            name="password"
+            id="password"
+            required
+          />
         </fieldset>
 
         <fieldset>
           <legend>Контактные данные</legend>
           <label for="email">Почта</label>
           <input
+            class="field"
             placeholder="IvanIvanov@mail.ru"
             type="email"
             name="email"
@@ -61,21 +72,24 @@
           />
           <label for="phone">Телефон</label>
           <input
+            class="field"
             placeholder="+79008006633"
             type="tel"
             name="phone"
             id="phone"
           />
           <label for="datetime">Удобный интервал для связи</label>
-          <select name="datetime" id="datetime">
+          <select class="field" name="datetime" id="datetime">
             <option value="morning">Утро</option>
             <option value="day">День</option>
             <option value="evening">Вечер</option>
             <option value="night">Ночь</option>
           </select>
         </fieldset>
-        <button type="submit">Отправить</button>
-        <button type="reset">Сбросить</button>
+        <div class="form__button">
+          <button type="submit">Отправить</button>
+          <button type="reset">Сбросить</button>
+        </div>
       </form>
     </main>
 

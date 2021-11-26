@@ -455,3 +455,83 @@ footer ul li {
   width: 100%;
   height: fit-content;
 }
+.auth {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%),
+    var(--backgroung);
+  margin-bottom: 100px;
+}
+.auth form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+.auth fieldset {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: none;
+}
+
+.auth legend {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: var(--black);
+}
+
+.auth label,
+select,
+input,
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
+.auth label,
+p {
+  margin-left: 10px;
+}
+.auth .field {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+  padding: 0 20px;
+  outline: none;
+  border: none;
+  height: 50px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+.form__button {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.form__button button {
+  width: fit-content;
+  padding: 13px 31px;
+  font-weight: bold;
+  background: none;
+  border: 2px solid var(--cards-border);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.auth select.field {
+  appearance: none;
+  background: url(./img/select.svg) no-repeat right;
+  background-size: 3%;
+  background-position-x: calc(100% - 20px);
+}
