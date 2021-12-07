@@ -528,10 +528,3 @@ input[type="radio"] {
   line-height: 20px;
   text-align: center;
 }
-
-.auth select.field {
-  appearance: none;
-  background: url(./img/select.svg) no-repeat right;
-  background-size: 3%;
-  background-position-x: calc(100% - 20px);
-}
