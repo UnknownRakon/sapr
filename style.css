@@ -611,14 +611,23 @@ button:disabled {
   border: 1px solid var(--report-text);
 }
 
+dt,
+dd {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--black);
+  margin-bottom: 5px;
+}
+
 dt::first-letter {
   font-weight: bold;
   color: red;
+  margin-left: 10px;
 }
 
 dd::before {
-  content: "\2139";
-  color: rgb(55, 0, 255);
+  content: "\1F6C8";
   margin-right: 10px;
 }
 
@@ -626,10 +635,11 @@ input[type="checkbox"]:checked + label {
   text-decoration: line-through;
 }
 
-.nth div:nth-child(even) {
-  color: blue !important;
+.nth div:nth-child(2n) label {
+  color: blue;
+  font-style: italic;
 }
 
-.nth div:nth-child(2n + 1) + label {
-  color: blueviolet;
+.nth div:nth-child(2n + 1) label {
+  color: rgb(126, 189, 25);
 }

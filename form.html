@@ -96,8 +96,19 @@
         <fieldset>
           <legend>Псевдоклассы и псевдоэлементы</legend>
           <dl>
-            <dt>:root</dt>
-            <dd>Находит корневой элемент дерева документа</dd>
+            <dt>:required</dt>
+            <dd>
+              находит любые "< input >" элементы, имеющие атрибут required
+            </dd>
+            <dt>:checked</dt>
+            <dd>
+              Находит любые элементы radio, checkbox или option, которые выбраны
+              или включены
+            </dd>
+            <dt>:disabled</dt>
+            <dd>Находит любой отключенный элемент</dd>
+            <dt>:enabled</dt>
+            <dd>Находит любой включенный элемент</dd>
           </dl>
         </fieldset>
 
@@ -118,6 +129,10 @@
           <div class="radio_container">
             <input type="checkbox" name="hover" id="hover" checked />
             <label for="hover">:hover</label>
+          </div>
+          <div class="radio_container">
+            <input type="checkbox" name="active" id="active" checked />
+            <label for="active">:active</label>
           </div>
         </fieldset>
         <div class="form__button">
