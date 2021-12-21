@@ -582,6 +582,18 @@ a:hover {
   font-weight: bold;
 }
 
+.action__button :hover {
+  background: var(--form);
+  color: var(--brown);
+  border-color: var(--brown);
+}
+
+.action__button :active {
+  background: var(--brown);
+  color: var(--form);
+  border-color: var(--brown);
+}
+
 .form__button button:hover {
   background: var(--brown);
   color: var(--form);
