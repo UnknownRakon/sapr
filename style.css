@@ -36,6 +36,10 @@ button {
   cursor: pointer;
 }
 
+button[type="reset"] {
+  cursor: auto;
+}
+
 nav {
   height: 100%;
 }
@@ -594,13 +598,13 @@ a:hover {
   border-color: var(--brown);
 }
 
-.form__button button:hover {
+button[type="submit"]:hover {
   background: var(--brown);
   color: var(--form);
   border-color: var(--brown);
 }
 
-.form__button button:active {
+button[type="submit"]:active {
   background: var(--form);
   color: var(--brown);
   border-color: var(--brown);
@@ -654,4 +658,13 @@ input[type="checkbox"]:checked + label {
 
 .nth div:nth-child(2n + 1) label {
   color: rgb(126, 189, 25);
+}
+
+.nth2 div:nth-child(2n) label {
+  color: rgb(230, 89, 24);
+}
+
+.nth2 div:nth-child(2n + 1) label {
+  color: rgb(44, 209, 159);
+  font-style: italic;
 }
