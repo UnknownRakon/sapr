@@ -34,18 +34,21 @@
       <form name="contact" method="POST" data-netlify="true">
         <fieldset>
           <legend>Личная информация</legend>
-          <label for="name">Имя</label>
+
           <input class="field" type="text" name="name" id="name" required />
+          <label for="name">Имя</label>
           <label for="date">Дата рождения</label>
           <input class="field" type="date" name="date" id="date" required />
           <p>Пол</p>
 
-          <label for="sex1">
-            <input type="radio" name="sex" id="sex1" />Мужской
-          </label>
-          <label for="sex1">
-            <input type="radio" name="sex" id="sex2" />Женский
-          </label>
+          <div class="radio_container">
+            <input class="radio" type="radio" name="sex" id="sex1" />
+            <label for="sex1"> Мужской </label>
+          </div>
+          <div class="radio_container">
+            <input class="radio" type="radio" name="sex" id="sex2" />
+            <label for="sex2"> Женский </label>
+          </div>
           <label for="password">Пароль</label>
           <input
             class="field"
@@ -85,7 +88,41 @@
         </fieldset>
         <div class="form__button">
           <button type="submit">Отправить</button>
-          <button type="reset">Сбросить</button>
+          <button type="reset" disabled>Сбросить</button>
+        </div>
+      </form>
+
+      <form name="contact" method="POST" data-netlify="true">
+        <fieldset>
+          <legend>Псевдоклассы и псевдоэлементы</legend>
+          <dl>
+            <dt>:root</dt>
+            <dd>Находит корневой элемент дерева документа</dd>
+          </dl>
+        </fieldset>
+
+        <fieldset class="nth">
+          <legend>Использовано в работе</legend>
+          <div class="radio_container">
+            <input type="checkbox" name="root" id="root" />
+            <label for="root">:root</label>
+          </div>
+          <div class="radio_container">
+            <input type="checkbox" name="link" id="link" />
+            <label for="link">:link</label>
+          </div>
+          <div class="radio_container">
+            <input type="checkbox" name="visited" id="visited" />
+            <label for="visited">:visited</label>
+          </div>
+          <div class="radio_container">
+            <input type="checkbox" name="hover" id="hover" checked />
+            <label for="hover">:hover</label>
+          </div>
+        </fieldset>
+        <div class="form__button">
+          <button type="submit">Отправить</button>
+          <button type="reset" disabled>Сбросить</button>
         </div>
       </form>
     </main>
