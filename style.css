@@ -305,7 +305,7 @@ h2 {
 
 .form-container {
   background: var(--form);
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 45px 193px 45px 60px;
   display: flex;
@@ -338,6 +338,7 @@ h4 {
   background: white;
   border-radius: 10px;
   box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
+  /* Тень для блока */
   width: 380px;
   display: flex;
   padding-right: 9px;
@@ -472,6 +473,7 @@ footer ul li {
   margin: 0 auto;
   padding: 30px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.08);
+  /* Тень для блока */
   border-radius: 20px;
 }
 
@@ -556,9 +558,9 @@ a:hover {
   text-decoration: underline;
 }
 .action__button:hover {
-  background: var(--brown);
-  color: var(--form);
-  border-color: var(--brown);
+  background: var(--black);
+  color: var(--caption);
+  border-color: var(--caption);
 }
 .action__button:active {
   background: var(--form);
@@ -584,18 +586,6 @@ a:hover {
 
 #name:focus + label {
   font-weight: bold;
-}
-
-.action__button :hover {
-  background: var(--form);
-  color: var(--brown);
-  border-color: var(--brown);
-}
-
-.action__button :active {
-  background: var(--brown);
-  color: var(--form);
-  border-color: var(--brown);
 }
 
 button[type="submit"]:hover {
@@ -667,4 +657,160 @@ input[type="checkbox"]:checked + label {
 .nth2 div:nth-child(2n + 1) label {
   color: rgb(44, 209, 159);
   font-style: italic;
+}
+
+/* L9 */
+
+/* Задаём фон картинкой */
+.section-background {
+  width: 100%;
+  height: 0;
+  /* Высота равно 0 */
+  background-image: url(./img/section2.png);
+  background-repeat: no-repeat;
+  /* Фоновое изображение не повторяется */
+  background-size: contain;
+  /* Масштабирует картинку так, чтобы она максимально накрыла собой 
+  весь блок. Картинка при этом не обрезается, а вписывается в блок с 
+  сохранением пропорций */
+  padding-top: 46.5%;
+  /* Увеличиваем высоту засчёт внутреннего отступа */
+  /* 100% / 46.5% -это соотношение сторон изображения */
+  background-color: rgb(216, 180, 126);
+  /* Задаём цвет фона */
+}
+
+.action__button {
+  transition: 1s;
+  /* Плавное изменение цвета фона у кнопки Lear More на главной, длится 1 секунду */
+}
+
+/* Ниже код для имитации загрузки карточки */
+
+/* Это индикатор загрузки */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid var(--quiz); /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation-name: spin;
+  /* Название анимации */
+  animation-iteration-count: 1;
+  /* Количество повторений анимации */
+  animation-duration: 5s;
+  /* Время выполнения анимации */
+  animation-fill-mode: forwards;
+  /* Указываем, чтобы после завершения анимации наш элемент остался в
+  последнем состоянии, в котором был (т.е невидимым) */
+  position: absolute;
+  /* чтобы индикатор загрузки был поверх контента карточки */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    /* Загрузчик начинает с угла 0 */
+    opacity: 1;
+    /* У загрузчика 100% видимость */
+  }
+  100% {
+    transform: rotate(360deg);
+    /* Загрузчик проворачивается до 360 градусов */
+    opacity: 0;
+    /* У загрузчика 0% видимость */
+    width: 0;
+    height: 0;
+    /* Чтобы загрузчик плавно становился меньше и в конце исчезал */
+  }
+}
+
+/* Ниже стили для содержимого каточки, которая загружается */
+.loaded-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  animation-name: load;
+  /* Название анимации */
+  animation-iteration-count: 1;
+  /* Количество повторений анимации */
+  animation-duration: 8s;
+  /* Время выполнения анимации */
+  animation-fill-mode: forwards;
+  /* Указываем, чтобы после завершения анимации наш элемент остался в
+  последнем состоянии, в котором был (т.е невидимым) */
+}
+@keyframes load {
+  /* Меняем у контента видимость с 0 до 100% */
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Тени для текста */
+
+legend {
+  text-shadow: 1px 1px 2px pink;
+}
+/* Градиенты */
+.demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.linear {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 180, 82, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  width: 200px;
+  height: 200px;
+}
+.radial {
+  background: radial-gradient(
+    circle,
+    rgba(161, 91, 0, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  width: 200px;
+  height: 200px;
+  transition: 1s;
+}
+.conic {
+  background: conic-gradient(white, black, white);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.conic:hover {
+  transform: rotate(20deg);
+  /* Поворачиваем на 20 градусов при наведении */
+}
+.radial:hover {
+  transform: scale(2, 3);
+  /* увеличивается в два раза от его исходной ширины и в 
+  три раза от его исходной высоты */
+}
+.three-d {
+  width: 120px;
+  height: 60px;
+  display: block;
+  border: 10px double var(--quiz);
+  transition: 3s;
+}
+/* 3д анимация, сделана с помощью генератора https://css-transform.moro.es/ */
+.three-d1:hover {
+  transform: rotate(212deg) rotateX(71deg) rotateY(154deg) rotateZ(126deg)
+    perspective(2200px) scale(0.5) translate(80px, -40px) skew(21deg, 135deg);
+}
+.three-d2:hover {
+  transform: rotate(341deg) rotateX(222deg) rotateY(285deg) rotateZ(139deg)
+    perspective(2000px) scale(0.9) translate(-100px, -50px) skew(172deg, 35deg);
 }

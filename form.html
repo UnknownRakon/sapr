@@ -1,189 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-      integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Лабораторная 2</title>
-  </head>
 
-  <body>
-    <header>
-      <a href="./index.html"><img src="img/logo.svg" alt="logo" /></a>
-      <nav>
-        <ul>
-          <li><a href="#">What is arcarta?</a></li>
-          <li><a href="#">Solutions</a></li>
-          <li><a href="#">Resources</a></li>
-          <li><a href="#">FAQs</a></li>
-          <li><a href="./form.html">Contact</a></li>
-          <li class="nav__button"><a href="#">Get started</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Лабораторная 2</title>
+</head>
 
-    <main class="auth">
-      <form name="contact" method="POST" data-netlify="true">
-        <fieldset>
-          <legend>Личная информация</legend>
+<body>
+  <header>
+    <a href="./index.html"><img src="img/logo.svg" alt="logo" /></a>
+    <nav>
+      <ul>
+        <li><a href="#">What is arcarta?</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="./form.html">Contact</a></li>
+        <li class="nav__button"><a href="./demo.html">Get started</a></li>
+      </ul>
+    </nav>
+  </header>
 
-          <input class="field" type="text" name="name" id="name" required />
-          <label for="name">Имя</label>
-          <label for="date">Дата рождения</label>
-          <input class="field" type="date" name="date" id="date" required />
-          <p>Пол</p>
+  <main class="auth">
+    <form name="contact" method="POST" data-netlify="true">
+      <fieldset>
+        <legend>Личная информация</legend>
 
-          <div class="radio_container">
-            <input class="radio" type="radio" name="sex" id="sex1" />
-            <label for="sex1"> Мужской </label>
-          </div>
-          <div class="radio_container">
-            <input class="radio" type="radio" name="sex" id="sex2" />
-            <label for="sex2"> Женский </label>
-          </div>
-          <label for="password">Пароль</label>
-          <input
-            class="field"
-            type="password"
-            name="password"
-            id="password"
-            required
-          />
-        </fieldset>
+        <input class="field" type="text" name="name" id="name" required />
+        <label for="name">Имя</label>
+        <label for="date">Дата рождения</label>
+        <input class="field" type="date" name="date" id="date" required />
+        <p>Пол</p>
 
-        <fieldset>
-          <legend>Контактные данные</legend>
-          <label for="email">Почта</label>
-          <input
-            class="field"
-            placeholder="IvanIvanov@mail.ru"
-            type="email"
-            name="email"
-            id="email"
-            required
-          />
-          <label for="phone">Телефон</label>
-          <input
-            class="field"
-            placeholder="+79008006633"
-            type="tel"
-            name="phone"
-            id="phone"
-          />
-          <label for="datetime">Удобный интервал для связи</label>
-          <select class="field" name="datetime" id="datetime">
-            <option value="morning">Утро</option>
-            <option value="day">День</option>
-            <option value="evening">Вечер</option>
-            <option value="night">Ночь</option>
-          </select>
-        </fieldset>
-        <div class="form__button">
-          <button type="submit">Отправить</button>
-          <button type="reset" disabled>Сбросить</button>
+        <div class="radio_container">
+          <input class="radio" type="radio" name="sex" id="sex1" />
+          <label for="sex1"> Мужской </label>
         </div>
-      </form>
-
-      <form name="contact" method="POST" data-netlify="true">
-        <fieldset>
-          <legend>Псевдоклассы и псевдоэлементы</legend>
-          <dl>
-            <dt>:required</dt>
-            <dd>
-              находит любые "< input >" элементы, имеющие атрибут required
-            </dd>
-            <dt>:checked</dt>
-            <dd>
-              Находит любые элементы radio, checkbox или option, которые выбраны
-              или включены
-            </dd>
-            <dt>:disabled</dt>
-            <dd>Находит любой отключенный элемент</dd>
-            <dt>:enabled</dt>
-            <dd>Находит любой включенный элемент</dd>
-          </dl>
-        </fieldset>
-
-        <fieldset class="nth">
-          <legend>Псевдоклассы, использованные в работе</legend>
-          <div class="radio_container">
-            <input type="checkbox" name="root" id="root" />
-            <label for="root">:root</label>
-          </div>
-          <div class="radio_container">
-            <input type="checkbox" name="link" id="link" />
-            <label for="link">:link</label>
-          </div>
-          <div class="radio_container">
-            <input type="checkbox" name="visited" id="visited" />
-            <label for="visited">:visited</label>
-          </div>
-          <div class="radio_container">
-            <input type="checkbox" name="hover" id="hover" checked />
-            <label for="hover">:hover</label>
-          </div>
-          <div class="radio_container">
-            <input type="checkbox" name="active" id="active" checked />
-            <label for="active">:active</label>
-          </div>
-        </fieldset>
-
-        <fieldset class="nth2">
-          <legend>Псевдоэлементы, использованные в работе</legend>
-          <div class="radio_container">
-            <input
-              type="checkbox"
-              name="first-letter"
-              id="first-letter"
-              checked
-            />
-            <label for="first-letter">::first-letter</label>
-          </div>
-          <div class="radio_container">
-            <input type="checkbox" name="first-line" id="first-line" />
-            <label for="first-line">::first-line</label>
-          </div>
-          <div class="radio_container">
-            <input type="checkbox" name="before" id="before" checked />
-            <label for="before">::before</label>
-          </div>
-          <div class="radio_container">
-            <input type="checkbox" name="after" id="after" />
-            <label for="after">::after</label>
-          </div>
-          <div class="radio_container">
-            <input
-              type="checkbox"
-              name="placeholder"
-              id="placeholder"
-              checked
-            />
-            <label for="placeholder">::placeholder</label>
-          </div>
-        </fieldset>
-        <div class="form__button">
-          <button type="submit">Отправить</button>
-          <button type="reset" disabled>Сбросить</button>
+        <div class="radio_container">
+          <input class="radio" type="radio" name="sex" id="sex2" />
+          <label for="sex2"> Женский </label>
         </div>
-      </form>
-    </main>
+        <label for="password">Пароль</label>
+        <input class="field" type="password" name="password" id="password" required />
+      </fieldset>
 
-    <footer class="fixed">
-      <div class="footer__bottom">
-        <img src="img/footer.svg" alt="footer" class="footer" />
-        <p class="footer-caption">Privacy & Terms</p>
-        <a href="#"><img src="img/twitter.svg" alt="twitter" /></a>
-        <a href="#"><img src="img/inst.svg" alt="inst" /></a>
-        <a href="#"><img src="img/youtube.svg" alt="youtube" /></a>
+      <fieldset>
+        <legend>Контактные данные</legend>
+        <label for="email">Почта</label>
+        <input class="field" placeholder="IvanIvanov@mail.ru" type="email" name="email" id="email" required />
+        <label for="phone">Телефон</label>
+        <input class="field" placeholder="+79008006633" type="tel" name="phone" id="phone" />
+        <label for="datetime">Удобный интервал для связи</label>
+        <select class="field" name="datetime" id="datetime">
+          <option value="morning">Утро</option>
+          <option value="day">День</option>
+          <option value="evening">Вечер</option>
+          <option value="night">Ночь</option>
+        </select>
+      </fieldset>
+      <div class="form__button">
+        <button type="submit">Отправить</button>
+        <button type="reset" disabled>Сбросить</button>
       </div>
-    </footer>
-  </body>
+    </form>
+
+    <form name="contact" method="POST" data-netlify="true">
+      <fieldset>
+        <legend>Псевдоклассы и псевдоэлементы</legend>
+        <dl>
+          <dt>:required</dt>
+          <dd>
+            находит любые "< input>" элементы, имеющие атрибут required
+          </dd>
+          <dt>:checked</dt>
+          <dd>
+            Находит любые элементы radio, checkbox или option, которые выбраны
+            или включены
+          </dd>
+          <dt>:disabled</dt>
+          <dd>Находит любой отключенный элемент</dd>
+          <dt>:enabled</dt>
+          <dd>Находит любой включенный элемент</dd>
+        </dl>
+      </fieldset>
+
+      <fieldset class="nth">
+        <legend>Псевдоклассы, использованные в работе</legend>
+        <div class="radio_container">
+          <input type="checkbox" name="root" id="root" />
+          <label for="root">:root</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="link" id="link" />
+          <label for="link">:link</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="visited" id="visited" />
+          <label for="visited">:visited</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="hover" id="hover" checked />
+          <label for="hover">:hover</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="active" id="active" checked />
+          <label for="active">:active</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="nth2">
+        <legend>Псевдоэлементы, использованные в работе</legend>
+        <div class="radio_container">
+          <input type="checkbox" name="first-letter" id="first-letter" checked />
+          <label for="first-letter">::first-letter</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="first-line" id="first-line" />
+          <label for="first-line">::first-line</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="before" id="before" checked />
+          <label for="before">::before</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="after" id="after" />
+          <label for="after">::after</label>
+        </div>
+        <div class="radio_container">
+          <input type="checkbox" name="placeholder" id="placeholder" checked />
+          <label for="placeholder">::placeholder</label>
+        </div>
+      </fieldset>
+      <div class="form__button">
+        <button type="submit">Отправить</button>
+        <button type="reset" disabled>Сбросить</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="fixed">
+    <div class="footer__bottom">
+      <img src="img/footer.svg" alt="footer" class="footer" />
+      <p class="footer-caption">Privacy & Terms</p>
+      <a href="#"><img src="img/twitter.svg" alt="twitter" /></a>
+      <a href="#"><img src="img/inst.svg" alt="inst" /></a>
+      <a href="#"><img src="img/youtube.svg" alt="youtube" /></a>
+    </div>
+  </footer>
+</body>
+
 </html>
