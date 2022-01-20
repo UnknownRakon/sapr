@@ -814,3 +814,148 @@ legend {
   transform: rotate(341deg) rotateX(222deg) rotateY(285deg) rotateZ(139deg)
     perspective(2000px) scale(0.9) translate(-100px, -50px) skew(172deg, 35deg);
 }
+
+/* Адаптивная вёрстка */
+@media (min-width: 1440px) {
+  body {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%),
+      var(--backgroung);
+  }
+  header {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  main {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  .section-background {
+    background-color: transparent;
+    width: 100%;
+  }
+  .section-two {
+    background: transparent;
+  }
+  footer {
+    width: 1440px;
+    height: fit-content;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1023px) and (max-width: 1440px) {
+  nav a {
+    width: fit-content;
+    word-wrap: normal;
+  }
+  .nav__button a {
+    word-break: normal;
+    word-wrap: normal;
+    width: fit-content;
+  }
+  .brands img {
+    width: calc(90% / 4);
+  }
+  .section-three {
+    padding: 0 0 135px;
+    margin: 0 auto;
+    width: 800px;
+  }
+}
+@media (max-width: 1023px) {
+  header {
+    flex-direction: column;
+    height: fit-content;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  .action {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  .section-one p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+  }
+  .brands {
+    flex-direction: column;
+  }
+  .section-one a {
+    margin-bottom: 30px;
+  }
+  .card {
+    height: fit-content;
+    width: 100%;
+    padding: 20px 27px;
+  }
+  h3 {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+  }
+  .card button {
+    padding: 8px 20px;
+    font-size: 0.8em;
+  }
+  .section-two p {
+    font-size: 1em;
+    line-height: 1.4em;
+    margin-bottom: 20px;
+  }
+  .section-background {
+    background-color: transparent;
+  }
+  .section-three {
+    flex-direction: column;
+    padding: 0;
+  }
+  .description {
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  h2 {
+    font-size: 2em;
+    line-height: 1.2em;
+    text-align: center;
+  }
+  .description p {
+    font-size: 1.1em;
+    line-height: 1.2em;
+    text-align: center;
+  }
+  .form-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+  }
+  h4 {
+    font-size: 1.4em;
+  }
+  .form-container p {
+    font-weight: 500;
+    font-size: 1.1em;
+    line-height: 1.3em;
+    margin-bottom: 10px;
+  }
+  .form {
+    width: 100%;
+    text-align: center;
+  }
+  .form form {
+    width: 100%;
+  }
+  .hidden {
+    display: none;
+  }
+  footer {
+    padding: 0;
+    height: fit-content;
+  }
+}
